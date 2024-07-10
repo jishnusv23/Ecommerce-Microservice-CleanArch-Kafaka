@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import { IDepedencies } from "../../application/interfaces/IDependencies";
 import { hashPassword } from "../../utils/bcrypt/hashPassword";
 import generateToken from "../../utils/jwt/generateToken";
+import { userCreatedProducer } from "../../infrastructure/kafka/producers/userCreatedProducer";
 
 export const singupController = (dependencies: IDepedencies) => {
   const {
@@ -88,13 +89,31 @@ export const singupController = (dependencies: IDepedencies) => {
         });
 
         //*success response
+        res.status(201).json({
+          success: true,
+          data: user,
+          message: "User Created Successfully",
+        });
+        const adduser = {
+          _id: user._id,
+          username:user.username,
+          email:user.email,
+          password:user.password,
+          role:user.role,
+          isBlocked:user.isBlocked,
+          isAdmin:user.isAdmin
+          
+
+        };
+        //* send the user details in kafka
+        if(adduser){
+          userCreatedProducer(adduser)
+
+        }
+      }else{
         res
-          .status(201)
-          .json({
-            success: true,
-            data: user,
-            message: "User Created Successfully",
-          });
+          .status(404)
+          .json({success:false,message:'User Not Found'})
       }
     } catch (error) {
       next(error);

@@ -25,8 +25,8 @@ export const userCreatedProducer = async (data: userEnitites) => {
       throw new Error("undefined role");
     }
   } catch (error: any) {
-    console.error(error?.message);
+    console.error('kafka producer error in auth-service',error?.message);
   } finally {
     await producer.disconnect();
   }
-};
+};  
