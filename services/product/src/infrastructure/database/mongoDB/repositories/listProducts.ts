@@ -2,7 +2,7 @@ import { Product } from "../../../../domain/entities";
 import { Products } from "../models/productSchema";
 import { verifyToken } from "../../../../util/verifyToken";
 
-export const listProduct = async (token: string): Promise<Product [] | null> => {
+export const listProduct = async (token: string): Promise<Product[] | null> => {
   try {
     const decodeToken = await verifyToken(token);
 

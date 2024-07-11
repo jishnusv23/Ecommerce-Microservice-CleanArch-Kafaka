@@ -15,6 +15,8 @@ export const listProductController = (dependencies: IDpendencies) => {
       const proudct: Product[] | null = await listProductUseCase(
         dependencies
       ).execute(token);
+      console.log("proudct: ", proudct);
+      
       if (!proudct) {
         throw new Error("product not found");
       }

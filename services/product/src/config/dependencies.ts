@@ -4,5 +4,5 @@ import * as useCases from "../application/useCases";
 
 export const dependencies: IDpendencies = {
   repositories,
-  useCases
+  useCases,
 };
