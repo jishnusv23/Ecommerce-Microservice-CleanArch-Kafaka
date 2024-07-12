@@ -1,0 +1,27 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npm run build:watch\" \"npm run serve\"",
+    "build:watch": "tsc --watch",
+    "serve": "nodemon dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^20.14.10",
+    "bcrypt": "^5.1.1",
+    "concurrently": "^8.2.2",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
