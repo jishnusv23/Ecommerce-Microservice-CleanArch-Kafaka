@@ -1,7 +1,7 @@
 import { cartEntities } from "../../../../domain/entities/cartEntities";
 import { CartModel } from "../models/cartModel";
 
-export const getCat = async (userId: string): Promise<cartEntities | null> => {
+export const getCart = async (userId: string): Promise<cartEntities | null> => {
   try {
     const usersId = userId;
     const cartDocument: cartEntities | null = await CartModel.findOne({

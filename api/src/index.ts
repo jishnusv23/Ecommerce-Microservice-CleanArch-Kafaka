@@ -19,6 +19,8 @@ app.get("/", (req, res) => {
   res.json({ success: true,meaasa:"sds-----hhhhhh------d" });
 });
 app.use("/auth", proxy("http://localhost:3000"));
+app.use("/product",proxy("http://localhost:4000"))
+app.use('/cart',proxy("http://localhost:6000"))
 
 app.listen(PORT, () => {
   console.log("workign api");
