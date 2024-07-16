@@ -26,4 +26,4 @@ jobs:
         with:
           context: ./services/admin/
           push: true
-          tags: jishnusv23/Ecommerce-admin-service:latest
+          tags: jishnusv23/ecommerce-admin-service:latest

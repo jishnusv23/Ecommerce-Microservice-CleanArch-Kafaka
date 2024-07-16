@@ -26,4 +26,4 @@ jobs:
         with:
           context: ./services/product/
           push: true
-          tags: jishnusv23/Ecommerce-product-service:latest
+          tags: jishnusv23/ecommerce-product-service:latest

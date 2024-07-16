@@ -26,4 +26,4 @@ jobs:
         with:
           context: ./services/auth/
           push: true
-          tags: jishnusv23/Ecommerce-auth-service:latest
+          tags: jishnusv23/ecommerce-auth-service:latest
