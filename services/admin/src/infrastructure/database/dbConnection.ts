@@ -3,7 +3,8 @@ import dotenv from "dotenv";
 
 export default async () => {
   try {
-    const mongodbURI = process.env.MONOGDB_URI;
+    dotenv.config()
+    const mongodbURI = process.env.MONGODB_URI;
     if (!mongodbURI) {
       throw new Error("🤖 Database path has not working in admin-service");
     }

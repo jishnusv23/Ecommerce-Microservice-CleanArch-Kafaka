@@ -5,7 +5,7 @@ dotenv.config();
 
 export default async () => {
   try {
-    const mongodbURI = process.env.MONOGDB_URI;
+    const mongodbURI = process.env.MONGODB_URI;
     if (!mongodbURI) {
       throw new Error("🤖databse path is mistake in cart-service");
     }

@@ -30,8 +30,8 @@ export const runConsumer = async () => {
           console.error(
             `Error processing message from topic:${error?.message}`
           );
-          throw new Error(error?.message);
           await stopConsumer();
+          throw new Error(error?.message);
         }
       },
     });
