@@ -6,3 +6,5 @@ export interface IDependencies{
     repositories:IRepositories,
     useCases:IUseCase
 }
+
+//*interface IDpendencies

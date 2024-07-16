@@ -3,7 +3,7 @@ import { IDpendencies } from "../../application/interface/IDependencies";
 import { Product } from "../../domain/entities";
 import { validationProductRequest } from "../../util/productValidation";
 import { productCreatedProducer } from "../../infrastructure/kafka/producers/productCreatedProducer";
-
+//*everything import
 export const addProductController = (dependencies: IDpendencies) => {
   return async (req: Request, res: Response, next: NextFunction) => {
     const {

@@ -4,7 +4,7 @@ enum Role {
   user = "user",
   admin = "admin",
 }
-
+//*adminentities
 export interface AdminEntities {
   _id?: ObjectId | string;
   username: string;
