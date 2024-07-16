@@ -7,3 +7,4 @@ export const controller = (dependencies: IDpendencies) => {
         listProduct:listProductController(dependencies)
     }
 };
+//* direct export 

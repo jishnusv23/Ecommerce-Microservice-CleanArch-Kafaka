@@ -7,4 +7,4 @@ export interface IDependencies{
     useCases:IUseCase
 }
 
-//*interface IDpendencies
+//*interface =IDpendencies

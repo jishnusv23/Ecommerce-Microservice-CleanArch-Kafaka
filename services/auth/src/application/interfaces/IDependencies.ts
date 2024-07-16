@@ -5,4 +5,4 @@ export interface IDepedencies {
   repositories: IRepositories;
   useCases:IUseCases
 }
-//*a=interface
+//*a=IDependencies
