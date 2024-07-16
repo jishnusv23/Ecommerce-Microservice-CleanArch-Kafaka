@@ -7,7 +7,7 @@ import { dependencies } from "../config/dependencies";
 
 const app: Application = express();
 const PORT: number = 5000;
-
+// *runing kafkaa
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

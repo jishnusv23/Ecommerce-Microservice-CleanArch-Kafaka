@@ -13,6 +13,7 @@ import { cartRouter } from "../infrastructure/router/cartRouter";
 dotenv.config();
 
 const app: Application = express();
+//*set the port
 const PORT: number = 6000;
 
 app.use(express.json());

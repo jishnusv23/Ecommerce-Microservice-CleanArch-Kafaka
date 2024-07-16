@@ -23,5 +23,5 @@ app.get("/test", (req,res) => {
 app.listen(PORT, () => {
   console.log(`The auth-service listening to the port ${PORT}`);
 });
-
+//*listening
 export default app;

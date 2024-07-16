@@ -23,6 +23,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   };
   return res.status(500).json(errorResponse);
 });
+//*listening set
 
 app.listen(PORT, () => {
   console.log("The product-service is runing port" + PORT);
